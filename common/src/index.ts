@@ -14,12 +14,15 @@ export const signinInput = z.object({
 export const createBlogInput = z.object({
     title : z.string(),
     content : z.string(),
+    published : z.boolean()
 })
 
 export const updateBlogInput = z.object({
     title : z.string(),
     content : z.string(),
-    id : z.number()
+    id : z.number(),
+    published : z.boolean()
+
 })
 
 export type SignupInput = z.infer<typeof signupInput>
